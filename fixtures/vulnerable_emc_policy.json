@@ -1,0 +1,23 @@
+{
+  "policy_name": "Unshielded Prototype Carrier Board (Vulnerable)",
+  "board_revision": "REV-X0-UNTESTED",
+  "worst_case_margin_db": 1.2,
+  "high_speed_traces_cross_split_plane": true,
+  "unbroken_return_plane_verified": false,
+  "tempest_crypto_shielding_enabled": false,
+  "enclosure_shielding_effectiveness_db": 14.0,
+  "external_io_cmc_filtered": false,
+  "cable_shield_360_terminated": false,
+  "max_enclosure_slot_length_mm": 45.0,
+  "perimeter_via_pitch_mm": 8.0,
+  "ssc_enabled_on_system_clocks": false,
+  "clock_series_damping_ohms": 0.0,
+  "max_switching_loop_area_mm2": 28.0,
+  "lisn_conducted_filter_verified": false,
+  "probe_antenna_factor_calibrated": false,
+  "rbw_120khz_qp_normalized": false,
+  "pdn_target_impedance_met": false,
+  "decoupling_loop_inductance_nh": 3.2,
+  "ambient_noise_baseline_subtracted": false,
+  "scan_report_sha256_logged": false
+}

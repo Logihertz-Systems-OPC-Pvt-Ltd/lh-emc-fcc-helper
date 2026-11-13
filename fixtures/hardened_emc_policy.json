@@ -1,0 +1,23 @@
+{
+  "policy_name": "Logihertz Sovereign Edge AI Carrier Board EMC Reference Policy",
+  "board_revision": "REV-C0",
+  "worst_case_margin_db": 8.5,
+  "high_speed_traces_cross_split_plane": false,
+  "unbroken_return_plane_verified": true,
+  "tempest_crypto_shielding_enabled": true,
+  "enclosure_shielding_effectiveness_db": 38.0,
+  "external_io_cmc_filtered": true,
+  "cable_shield_360_terminated": true,
+  "max_enclosure_slot_length_mm": 12.0,
+  "perimeter_via_pitch_mm": 2.5,
+  "ssc_enabled_on_system_clocks": true,
+  "clock_series_damping_ohms": 22.0,
+  "max_switching_loop_area_mm2": 6.5,
+  "lisn_conducted_filter_verified": true,
+  "probe_antenna_factor_calibrated": true,
+  "rbw_120khz_qp_normalized": true,
+  "pdn_target_impedance_met": true,
+  "decoupling_loop_inductance_nh": 0.75,
+  "ambient_noise_baseline_subtracted": true,
+  "scan_report_sha256_logged": true
+}

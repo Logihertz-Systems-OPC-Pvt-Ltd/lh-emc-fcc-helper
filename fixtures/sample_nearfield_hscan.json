@@ -1,0 +1,63 @@
+{
+  "scan_id": "SCAN-2026-LH-EMC-0912",
+  "eut_name": "Logihertz Carrier Board Edge Processing Unit",
+  "ambient_noise_subtracted": true,
+  "rbw_hz": 120000.0,
+  "probe_type": "Calibrated Magnetic H-Field Loop Probe",
+  "probe_af_db": 18.5,
+  "probe_radius_mm": 5.0,
+  "cable_loss_db": 0.6,
+  "preamp_gain_db": 10.0,
+  "enclosure_shielding_db": 32.0,
+  "slot_length_mm": 8.0,
+  "points": [
+    {
+      "freq_mhz": 48.0,
+      "psa_dbm": -52.0,
+      "loop_area_mm2": 10.0,
+      "cable_length_m": 0.4
+    },
+    {
+      "freq_mhz": 96.0,
+      "psa_dbm": -48.5,
+      "loop_area_mm2": 12.0,
+      "cable_length_m": 0.45
+    },
+    {
+      "freq_mhz": 144.0,
+      "psa_dbm": -54.0,
+      "loop_area_mm2": 8.0,
+      "cable_length_m": 0.35
+    },
+    {
+      "freq_mhz": 192.0,
+      "psa_dbm": -51.0,
+      "loop_area_mm2": 9.5,
+      "cable_length_m": 0.4
+    },
+    {
+      "freq_mhz": 240.0,
+      "psa_dbm": -56.5,
+      "loop_area_mm2": 7.0,
+      "cable_length_m": 0.3
+    },
+    {
+      "freq_mhz": 480.0,
+      "psa_dbm": -62.0,
+      "loop_area_mm2": 6.0,
+      "cable_length_m": 0.25
+    },
+    {
+      "freq_mhz": 720.0,
+      "psa_dbm": -68.0,
+      "loop_area_mm2": 5.0,
+      "cable_length_m": 0.2
+    },
+    {
+      "freq_mhz": 960.0,
+      "psa_dbm": -72.5,
+      "loop_area_mm2": 4.5,
+      "cable_length_m": 0.2
+    }
+  ]
+}

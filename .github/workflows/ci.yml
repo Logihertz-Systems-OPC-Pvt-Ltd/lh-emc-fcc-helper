@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Build, Lint & Verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Verify zero external dependencies
+        run: |
+          # Verify [dependencies] section in Cargo.toml is empty
+          python3 -c "
+          import tomllib
+          with open('Cargo.toml', 'rb') as f:
+              data = tomllib.load(f)
+          deps = data.get('dependencies', {})
+          assert len(deps) == 0, f'Expected zero dependencies, found: {deps}'
+          print('OK: [dependencies] is strictly empty.')
+          "
+
+      - name: Code formatting check (rustfmt)
+        run: cargo fmt --check
+
+      - name: Lint with Clippy (-D warnings)
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Run test suite
+        run: cargo test --verbose
+
+      - name: Smoke test CLI subcommands
+        run: |
+          cargo run -- --version
+          cargo run -- --help
+          cargo run -- scan fixtures/hardened_emc_policy.json
+          cargo run -- scan fixtures/hardened_emc_policy.json --format json
+          cargo run -- scan fixtures/hardened_emc_policy.json --format sarif
+          cargo run -- extrapolate-scan fixtures/sample_nearfield_hscan.json
+          cargo run -- extrapolate-scan fixtures/sample_nearfield_hscan.json --format json
+          cargo run -- clock-harmonics --freq-mhz 50.0 --rise-ns 1.5 --vdd 3.3 --duty 0.5 --ssc-pct 0.5
+          cargo run -- check-limit --freq-mhz 100.0 --field-dbuv 30.0

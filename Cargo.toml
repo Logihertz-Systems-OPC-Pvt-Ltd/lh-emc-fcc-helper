@@ -1,0 +1,30 @@
+[package]
+name = "lh-emc-fcc-helper"
+version = "0.1.0"
+edition = "2021"
+authors = ["Logihertz Systems <ops@logihertz.com>"]
+description = "Production-grade, zero-dependency Rust Hardware EMC Pre-Compliance Calculator, Near-Field H-Probe to Far-Field Radiated Emission Extrapolator, FCC Part 15B / CISPR 32 Limit Verifier, and 10-Rule EMI & TEMPEST Security Posture Auditor"
+license = "Apache-2.0"
+repository = "https://github.com/Logihertz-Systems-OPC-Pvt-Ltd/lh-emc-fcc-helper"
+readme = "README.md"
+keywords = ["emc", "fcc-part-15b", "cispr32", "near-field", "tempest"]
+categories = ["command-line-utilities", "hardware-support", "science"]
+
+[lib]
+name = "lh_emc_fcc"
+path = "src/lib.rs"
+
+[[bin]]
+name = "lh-emc-fcc"
+path = "src/main.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
