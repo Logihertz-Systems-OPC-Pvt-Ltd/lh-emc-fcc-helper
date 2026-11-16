@@ -1,0 +1,9 @@
+Package: lh-emc-fcc-helper
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Sameer Tawade <ops@logihertz.com>
+Homepage: https://www.logihertz.com
+Description: lh-emc-fcc - Maxwell Near-Field H-Probe to Far-Field Radiated Electric Field
+ Pure-Rust hardware EMC pre-compliance calculator translating near-field H-probe scans into 3m/10m far-field radiated emissions against FCC Part 15B and CISPR 32 Class A/B limits with clock harmonic & TEMPEST analysis.
